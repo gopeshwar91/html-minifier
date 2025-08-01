@@ -874,7 +874,6 @@ function minify(value, options, partialMarkup) {
   });
   if (customFragments.length) {
     var reCustomIgnore = new RegExp('\\s*(?:' + customFragments.join('|') + ')+\\s*', 'g');
-    console.log("=================1",reCustomIgnore)
     // temporarily replace custom ignored fragments with unique attributes
     value = value.replace(reCustomIgnore, function(match) {
       if (!uidAttr) {
